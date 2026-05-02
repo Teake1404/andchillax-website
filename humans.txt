@@ -1,0 +1,16 @@
+/* TEAM */
+Owner: Ewa Levinson
+Site: https://www.andchillax.co.uk
+Email: eva@andchillax.co.uk
+Phone: 07950 222958
+Location: Anerley, London SE20 7AB
+
+/* SITE */
+Built: 2026
+Stack: Static HTML5 / CSS3
+Hosting: Netlify
+Booking: Bookwhen
+CMS: Decap CMS
+
+/* THANKS */
+Thanks to every parent and professional who's trained with us since 2010.

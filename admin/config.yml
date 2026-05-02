@@ -1,0 +1,83 @@
+# Decap CMS configuration for And Chillax
+# Docs: https://decapcms.org/docs/configuration-options/
+
+backend:
+  name: git-gateway
+  branch: main
+
+# Where uploaded images go
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+# Friendly admin UI labels
+site_url: https://www.andchillax.co.uk
+display_url: https://www.andchillax.co.uk
+logo_url: /site_main_logo1.png
+locale: en
+
+# Editorial workflow — drafts before publishing
+publish_mode: editorial_workflow
+
+# Content collections Eva can edit
+collections:
+
+  # =================================================================
+  # BLOG POSTS — primary editing surface for Eva
+  # =================================================================
+  - name: "blog"
+    label: "Blog Posts"
+    label_singular: "Blog Post"
+    folder: "blog"
+    create: true
+    slug: "{{slug}}"
+    extension: "html"
+    format: "frontmatter"
+    summary: "{{title}} — {{date | date('YYYY-MM-DD')}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string", hint: "The headline of the post — also becomes the page title shown in Google."}
+      - {label: "URL slug", name: "slug", widget: "string", hint: "What appears in the URL (e.g. 'baby-choking' becomes /blog/baby-choking). Lowercase, hyphens, no spaces."}
+      - {label: "Category", name: "category", widget: "select", options: ["First Aid", "Doula", "Newborn Safety", "Birth", "Childhood Illness"]}
+      - {label: "Reading time (minutes)", name: "reading_time", widget: "number", default: 5, min: 1, max: 30}
+      - {label: "Publish date", name: "date", widget: "datetime"}
+      - {label: "Featured image (optional)", name: "image", widget: "image", required: false, hint: "Upload a photo to show at the top of the post and on the blog index card."}
+      - {label: "Image alt text", name: "image_alt", widget: "string", required: false, hint: "Describe the image for accessibility and SEO. E.g. 'Hand demonstrating back-blow technique on infant manikin'."}
+      - {label: "Short summary (for blog index card)", name: "excerpt", widget: "string", hint: "1-2 sentence preview shown on the blog index. Max 160 characters."}
+      - {label: "Body", name: "body", widget: "markdown", hint: "Write your post here. Use ## for section headings, **bold** for emphasis."}
+      - {label: "Related course CTA", name: "cta_course", widget: "select", required: false, options: ["", "12-Hour Paediatric Blended", "2-Hour Parent First Aid", "1-Day EFAW", "Doula Services", "Anaphylaxis Course"], hint: "Choose which course to recommend at the end of this post (drives bookings)."}
+
+  # =================================================================
+  # SITE SETTINGS — high-level details Eva might update
+  # =================================================================
+  - name: "settings"
+    label: "Site Settings"
+    delete: false
+    editor:
+      preview: false
+    files:
+      - file: "_data/site.json"
+        name: "general"
+        label: "General Settings"
+        fields:
+          - {label: "Site title", name: "title", widget: "string"}
+          - {label: "Site tagline", name: "tagline", widget: "string"}
+          - {label: "Phone", name: "phone", widget: "string"}
+          - {label: "Email", name: "email", widget: "string"}
+          - {label: "Bookwhen URL", name: "bookwhen_url", widget: "string", hint: "Where the 'Book a Course' buttons point (e.g. https://bookwhen.com/andchillax)"}
+          - label: "Google reviews"
+            name: "reviews"
+            widget: "object"
+            fields:
+              - {label: "Star rating", name: "rating", widget: "string", default: "5.0"}
+              - {label: "Review count", name: "count", widget: "number", default: 13}
+
+      - file: "_data/courses.json"
+        name: "course_prices"
+        label: "Course Prices"
+        fields:
+          - label: "Courses"
+            name: "courses"
+            widget: "list"
+            fields:
+              - {label: "Course name", name: "name", widget: "string"}
+              - {label: "Price", name: "price", widget: "string", hint: "e.g. '£80 / person · £700 / group of 14'"}
+              - {label: "Active", name: "active", widget: "boolean", default: true}

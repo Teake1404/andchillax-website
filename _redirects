@@ -1,0 +1,26 @@
+# Clean URL redirects + legacy URL handling
+
+# Old Wix URLs that may have backlinks → redirect to new structure
+/2-hour-parent-first-aid-course      /courses/2-hour-parent-first-aid               301
+/6-hour-paediatric-first-aid-course  /courses/6-hour-paediatric-first-aid           301
+/12                                  /courses/12-hour-paediatric-first-aid          301
+/12-hour-paediatric-first-aid-course /courses/12-hour-paediatric-first-aid          301
+/1-day-emergency-first-aid-at-work-c /courses/1-day-emergency-first-aid-at-work     301
+/1-day-emergency-first-aid-at-work-course /courses/1-day-emergency-first-aid-at-work 301
+/2-day-first-aid-at-work-course      /courses/2-day-first-aid-at-work               301
+/3-day-first-aid-at-work-course      /courses/3-day-first-aid-at-work               301
+/first-aid-for-schools               /courses/first-aid-for-schools                 301
+/anaphylaxis-course                  /courses/anaphylaxis                           301
+/online-1-hour-parent-first-aid-cour /courses/online-1-hour-parent-first-aid        301
+/online-baby-massage-courses         /baby-massage                                  301
+/doula-services                      /doula-services                                200
+/blog-1                              /blog                                          301
+/book-online                         /courses                                       301
+
+# CMS admin shortcut
+/admin                               /admin/index.html                              200
+
+# Catch-all clean URLs (Netlify usually does this automatically with pretty_urls,
+# but these are explicit for paths Netlify can't auto-resolve)
+/courses                             /courses/index.html                            200
+/blog                                /blog/index.html                               200
