@@ -1,0 +1,48 @@
+name: Refresh Google Reviews
+
+# Auto-pull Eva's latest Google Business Profile reviews via DataForSEO
+# and commit any updates. Runs weekly (Sunday 04:00 UTC) so any new review
+# appears on the site within 7 days without manual intervention.
+#
+# Required secrets (set in GitHub → Settings → Secrets and variables → Actions):
+#   DATAFORSEO_LOGIN
+#   DATAFORSEO_PASSWORD
+
+on:
+  schedule:
+    - cron: '0 4 * * 0'   # Sunday 04:00 UTC
+  workflow_dispatch:       # also allow manual run via Actions tab
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write       # commit changes back
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Fetch latest reviews + render HTML
+        env:
+          DATAFORSEO_LOGIN: ${{ secrets.DATAFORSEO_LOGIN }}
+          DATAFORSEO_PASSWORD: ${{ secrets.DATAFORSEO_PASSWORD }}
+        run: python3 scripts/fetch-reviews.py
+
+      - name: Commit changes if any
+        run: |
+          git config user.name "review-bot"
+          git config user.email "noreply@andchillax.co.uk"
+          git add data/google-reviews.json reviews.html index.html courses/*.html
+          if git diff --cached --quiet; then
+            echo "No new reviews — nothing to commit."
+          else
+            git commit -m "Auto-refresh Google reviews ($(date -u +%Y-%m-%d))"
+            git push
+            echo "Pushed updated reviews — Netlify will auto-deploy."
+          fi
