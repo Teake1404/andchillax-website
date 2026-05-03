@@ -88,15 +88,15 @@
   </url>
 
   <!-- Blog -->
-  <url>
-    <loc>https://www.andchillax.co.uk/blog/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.andchillax.co.uk/blog/baby-choking</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+  <url><loc>https://www.andchillax.co.uk/blog/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.andchillax.co.uk/blog/baby-choking</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.andchillax.co.uk/blog/infant-cpr</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.andchillax.co.uk/blog/hospital-bag-checklist</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.andchillax.co.uk/blog/what-does-a-doula-do</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.andchillax.co.uk/blog/hand-foot-mouth</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.andchillax.co.uk/blog/febrile-seizures</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.andchillax.co.uk/blog/hot-water-bottle-burns</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.andchillax.co.uk/blog/newborn-car-seat</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.andchillax.co.uk/blog/co-sleeping-safely</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
 </urlset>
