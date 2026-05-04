@@ -24,3 +24,10 @@
 # but these are explicit for paths Netlify can't auto-resolve)
 /courses                             /courses/index.html                            200
 /blog                                /blog/index.html                               200
+
+# Retired courses (May 2026) — redirect to courses hub
+/courses/online-1-hour-parent-first-aid    /courses/                                    301
+/courses/anaphylaxis                       /courses/                                    301
+/courses/6-hour-paediatric-first-aid       /courses/12-hour-paediatric-first-aid       301
+/courses/2-day-first-aid-at-work           /courses/1-day-emergency-first-aid-at-work  301
+/courses/3-day-first-aid-at-work           /courses/1-day-emergency-first-aid-at-work  301
