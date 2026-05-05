@@ -13,6 +13,9 @@
 <header class="site-header">
   <div class="container site-header__inner">
     <a href="index.html" class="brand">And Chillax</a>
+        <button class="site-header__menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" type="button">
+      <span></span><span></span><span></span>
+    </button>
     <nav class="nav" aria-label="Main">
       <a href="courses/index.html">First Aid Courses</a>
       <a href="baby-massage.html" class="active">Baby Massage</a>
@@ -74,8 +77,8 @@
       <div class="service-card">
         <span class="service-card__label">Bespoke · Private 1-2-1</span>
         <h3 class="service-card__title">Private Home Sessions</h3>
-        <p class="service-card__desc">A one-to-one session in your home covering exactly what you and your baby need — colic, sleep, bonding, or wind. Particularly good for first-time parents who want focused attention.</p>
-        <p class="service-card__price">£60 / session</p>
+        <p class="service-card__desc">A one-to-one (or you + your partner — same price) session in your home covering exactly what you and your baby need — colic, sleep, bonding, or wind. Particularly good for first-time parents who want focused attention.</p>
+        <p class="service-card__price">£120 / session · 1-to-1 or 1-to-2 (partner free)</p>
       </div>
     </div>
   </div>
@@ -120,5 +123,22 @@
     <div class="footer-bottom"><span>© 2026 And Chillax · Eva Levinson</span><span>Serving Anerley · Crystal Palace · Penge · Sydenham · Beckenham · Bromley · Dulwich</span><a href="https://www.instagram.com/andchillax/" target="_blank" rel="noopener" aria-label="Follow And Chillax on Instagram" style="display:inline-flex;align-items:center;gap:.4em">Instagram → @andchillax</a></div>
   </div>
 </footer>
+
+<script>
+document.addEventListener('click', function (e) {
+  var btn = e.target.closest('.site-header__menu-toggle');
+  if (btn) {
+    var hdr = btn.closest('.site-header');
+    var open = hdr.classList.toggle('is-open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    return;
+  }
+  var link = e.target.closest('.nav a');
+  if (link) {
+    var hdr2 = link.closest('.site-header');
+    if (hdr2) { hdr2.classList.remove('is-open'); }
+  }
+});
+</script>
 </body>
 </html>
