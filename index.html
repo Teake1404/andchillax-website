@@ -12,6 +12,20 @@
   <meta property="og:url" content="https://www.andchillax.co.uk/">
   <link rel="stylesheet" href="assets/style.css?v=6">
 
+  <!-- Netlify Identity widget — handles CMS invite tokens that land on homepage -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+
   <!-- LocalBusiness schema (this DOES work in Wix via Custom Code in Settings) -->
   <script type="application/ld+json">
   {

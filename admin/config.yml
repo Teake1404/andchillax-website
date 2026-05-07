@@ -1,15 +1,13 @@
 # Decap CMS configuration for And Chillax
 # Docs: https://decapcms.org/docs/configuration-options/
 
-# Backend: GitHub OAuth via Netlify's free OAuth provider.
-# Eva logs in at /admin with the "Sign in with GitHub" button.
-# She must be a collaborator on the Teake1404/andchillax-website repo.
+# Backend: Netlify Identity + Git Gateway.
+# Eva logs in at /admin with email + password (set via invite email).
+# Shuqing owns the Netlify account and invites her as an Identity user.
+# She never sees Netlify itself — only the friendly CMS editor.
 backend:
-  name: github
-  repo: Teake1404/andchillax-website
+  name: git-gateway
   branch: main
-  base_url: https://api.netlify.com
-  auth_endpoint: auth
 
 # Where uploaded images go (relative to repo root)
 media_folder: "assets/uploads"
