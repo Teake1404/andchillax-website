@@ -24,6 +24,8 @@
 # but these are explicit for paths Netlify can't auto-resolve)
 /courses                             /courses/index.html                            200
 /blog                                /blog/index.html                               200
+/thanks                              /thanks.html                                   200
+/leave-a-review                      /leave-a-review.html                           200
 
 # Retired courses (May 2026) — redirect to courses hub
 /courses/online-1-hour-parent-first-aid    /courses/                                    301
