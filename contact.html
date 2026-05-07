@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact And Chillax — First Aid &amp; Doula in Anerley, South London</title>
   <meta name="description" content="Contact Eva Levinson at And Chillax. First aid courses, baby massage and doula services in Anerley (SE20), South London. Phone, email, online booking.">
-  <link rel="stylesheet" href="assets/style.css?v=2">
+  <link rel="stylesheet" href="assets/style.css?v=3">
 </head>
 <body>
 
@@ -13,7 +13,7 @@
   <div class="container site-header__inner">
     <a href="index.html" class="brand">And Chillax</a>
         <button class="site-header__menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" type="button">
-      <span></span><span></span><span></span>
+      <span class="site-header__menu-toggle__icon"><span></span><span></span><span></span></span>
     </button>
     <nav class="nav" aria-label="Main">
       <a href="courses/index.html">First Aid Courses</a>
@@ -49,7 +49,9 @@
         <h2>Send a message</h2>
         <p>I aim to reply within one working day. For urgent course enquiries please call.</p>
 
-        <form action="#" method="POST" style="margin-top: 1.5rem">
+        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html" style="margin-top: 1.5rem">
+          <input type="hidden" name="form-name" value="contact">
+          <p hidden><label>Don't fill this out: <input name="bot-field"></label></p>
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
             <div>
               <label for="firstname" style="display: block; font-weight: 600; margin-bottom: 0.4rem; font-size: var(--fs-sm);">First name</label>
