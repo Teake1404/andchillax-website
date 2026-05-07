@@ -226,7 +226,7 @@ hr { border: none; border-top: 1px solid var(--colour-border); margin: 3rem 0; }
   content: 'Menu';
 }
 .site-header.is-open .site-header__menu-toggle::after {
-  content: 'Close';
+  content: '✕  Close';
 }
 .site-header__menu-toggle__icon {
   display: inline-flex;
