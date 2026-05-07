@@ -244,14 +244,10 @@ hr { border: none; border-top: 1px solid var(--colour-border); margin: 3rem 0; }
   margin: 2.5px 0;
   transition: transform 0.25s, opacity 0.25s;
 }
-.site-header.is-open .site-header__menu-toggle__icon span:nth-child(1) {
-  transform: translateY(5px) rotate(45deg);
-}
-.site-header.is-open .site-header__menu-toggle__icon span:nth-child(2) {
-  opacity: 0;
-}
-.site-header.is-open .site-header__menu-toggle__icon span:nth-child(3) {
-  transform: translateY(-5px) rotate(-45deg);
+/* When the menu is open, hide the hamburger icon entirely — the
+   word "CLOSE" by itself is clearer than half-rendered X bars. */
+.site-header.is-open .site-header__menu-toggle__icon {
+  display: none;
 }
 
 @media (max-width: 900px) {
