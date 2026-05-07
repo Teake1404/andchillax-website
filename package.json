@@ -1,0 +1,14 @@
+{
+  "name": "andchillax-website",
+  "version": "1.0.0",
+  "description": "And Chillax — first aid, baby massage and doula services in South London",
+  "private": true,
+  "scripts": {
+    "build": "eleventy",
+    "dev": "eleventy --serve --port=8080",
+    "clean": "rm -rf _site"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}
