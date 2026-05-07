@@ -37,7 +37,7 @@
     <div style="max-width: 38em">
       <p class="hero__eyebrow">Get in touch</p>
       <h1>Have a question?<br>The fastest way to reach me.</h1>
-      <p class="hero__subtitle">Most people use the form below. For booking, please use Bookwhen — it's faster than emailing back and forth and lets you secure a date instantly.</p>
+      <p class="hero__subtitle">For private 2-hour parent first aid, school bookings or doula support — fill in the form below and Eva will reply within 24 hours. For open dates on the 12-Hour Paediatric, EFAW or 5-Week Baby Massage, you can book directly on Bookwhen.</p>
     </div>
   </div>
 </section>
@@ -72,12 +72,13 @@
             <label for="topic" style="display: block; font-weight: 600; margin-bottom: 0.4rem; font-size: var(--fs-sm);">What's it about?</label>
             <select id="topic" name="topic" required style="width: 100%; padding: 0.75rem; border: 1px solid var(--colour-border); border-radius: var(--radius); font-family: inherit; background: white;">
               <option value="">Choose one…</option>
-              <option>Parent first aid course</option>
-              <option>Paediatric first aid (Ofsted) — for childcare professionals</option>
-              <option>Workplace first aid (EFAW / FAW)</option>
-              <option>Doula services</option>
-              <option>Baby massage</option>
-              <option>General enquiry</option>
+              <option value="parent-first-aid">Parent first aid course (private 2-hour)</option>
+              <option value="paediatric">Paediatric first aid (Ofsted) — for childcare professionals</option>
+              <option value="workplace">Workplace first aid (EFAW / FAW)</option>
+              <option value="schools">First Aid for Schools</option>
+              <option value="doula">Doula services</option>
+              <option value="baby-massage">Baby massage</option>
+              <option value="general">General enquiry</option>
             </select>
           </div>
           <div style="margin-top: 1rem">
@@ -90,8 +91,8 @@
 
       <aside class="course-pricing-card">
         <h3 style="margin-top: 0">Quick options</h3>
-        <p style="font-size: var(--fs-sm); margin-bottom: 1.5rem; color: var(--colour-text-muted)">Most enquiries are about course dates — Bookwhen is fastest:</p>
-        <a href="https://bookwhen.com/andchillax" class="btn btn--primary course-pricing-card__btn">Book online →</a>
+        <p style="font-size: var(--fs-sm); margin-bottom: 1.5rem; color: var(--colour-text-muted)">For courses with set dates (12-Hour Paediatric, EFAW, 5-Week Baby Massage), book directly on Bookwhen:</p>
+        <a href="https://bookwhen.com/andchillax" class="btn btn--primary course-pricing-card__btn">See open dates on Bookwhen →</a>
 
         <hr style="margin: 1.5rem 0;">
 
@@ -139,6 +140,20 @@ document.addEventListener('click', function (e) {
     if (hdr2) { hdr2.classList.remove('is-open'); }
   }
 });
+
+// Pre-select the topic dropdown from ?topic=… URL parameter
+(function () {
+  var params = new URLSearchParams(window.location.search);
+  var topic = params.get('topic');
+  if (topic) {
+    var sel = document.getElementById('topic');
+    if (sel) {
+      for (var i = 0; i < sel.options.length; i++) {
+        if (sel.options[i].value === topic) { sel.selectedIndex = i; break; }
+      }
+    }
+  }
+})();
 </script>
 </body>
 </html>
