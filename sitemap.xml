@@ -3,80 +3,80 @@
 
   <!-- Homepage + main pages -->
   <url>
-    <loc>https://www.andchillax.co.uk/</loc>
+    <loc>https://andchillax.co.uk/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.andchillax.co.uk/about</loc>
+    <loc>https://andchillax.co.uk/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.andchillax.co.uk/contact</loc>
+    <loc>https://andchillax.co.uk/contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.andchillax.co.uk/reviews</loc>
+    <loc>https://andchillax.co.uk/reviews</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.andchillax.co.uk/leave-a-review</loc>
+    <loc>https://andchillax.co.uk/leave-a-review</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <!-- Service pages -->
   <url>
-    <loc>https://www.andchillax.co.uk/baby-massage</loc>
+    <loc>https://andchillax.co.uk/baby-massage</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.andchillax.co.uk/doula-services</loc>
+    <loc>https://andchillax.co.uk/doula-services</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Course hub + individual courses -->
   <url>
-    <loc>https://www.andchillax.co.uk/courses/</loc>
+    <loc>https://andchillax.co.uk/courses/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.andchillax.co.uk/courses/12-hour-paediatric-first-aid</loc>
+    <loc>https://andchillax.co.uk/courses/12-hour-paediatric-first-aid</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.andchillax.co.uk/courses/2-hour-parent-first-aid</loc>
+    <loc>https://andchillax.co.uk/courses/2-hour-parent-first-aid</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.andchillax.co.uk/courses/1-day-emergency-first-aid-at-work</loc>
+    <loc>https://andchillax.co.uk/courses/1-day-emergency-first-aid-at-work</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.andchillax.co.uk/courses/first-aid-for-schools</loc>
+    <loc>https://andchillax.co.uk/courses/first-aid-for-schools</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <!-- Blog -->
-  <url><loc>https://www.andchillax.co.uk/blog/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.andchillax.co.uk/blog/baby-choking</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.andchillax.co.uk/blog/infant-cpr</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.andchillax.co.uk/blog/hospital-bag-checklist</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.andchillax.co.uk/blog/what-does-a-doula-do</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.andchillax.co.uk/blog/hand-foot-mouth</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.andchillax.co.uk/blog/febrile-seizures</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.andchillax.co.uk/blog/hot-water-bottle-burns</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.andchillax.co.uk/blog/newborn-car-seat</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.andchillax.co.uk/blog/co-sleeping-safely</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://andchillax.co.uk/blog/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://andchillax.co.uk/blog/baby-choking</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://andchillax.co.uk/blog/infant-cpr</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://andchillax.co.uk/blog/hospital-bag-checklist</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://andchillax.co.uk/blog/what-does-a-doula-do</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://andchillax.co.uk/blog/hand-foot-mouth</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://andchillax.co.uk/blog/febrile-seizures</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://andchillax.co.uk/blog/hot-water-bottle-burns</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://andchillax.co.uk/blog/newborn-car-seat</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://andchillax.co.uk/blog/co-sleeping-safely</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
 </urlset>

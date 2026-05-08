@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /admin/
 
-Sitemap: https://www.andchillax.co.uk/sitemap.xml
+Sitemap: https://andchillax.co.uk/sitemap.xml
