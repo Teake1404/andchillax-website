@@ -28,8 +28,8 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
-    # Allow Bookwhen iframe + Google Fonts
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://identity.netlify.com https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; frame-src 'self' https://bookwhen.com https://*.bookwhen.com https://www.google.com; connect-src 'self' https://api.netlify.com https://identity.netlify.com"
+    # Allow Bookwhen iframe + Google Fonts + Google Analytics 4
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://identity.netlify.com https://unpkg.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; frame-src 'self' https://bookwhen.com https://*.bookwhen.com https://www.google.com; connect-src 'self' https://api.netlify.com https://identity.netlify.com https://www.google-analytics.com https://*.analytics.google.com https://*.google-analytics.com"
 
 # CMS admin needs unsafe-eval (Decap uses eval internally) + GitHub API access
 [[headers]]
