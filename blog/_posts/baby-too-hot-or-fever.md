@@ -11,7 +11,7 @@ description: Is your baby too hot or running a fever? Learn how to tell the
   plain-English guide for new parents.
 keywords: baby fever, baby too hot, baby temperature, how to take baby
   temperature, when to call 999 baby fever, baby fever vs overheating
-image: ""
+image: pexels-laura-garcia-1667452-3963711.jpg
 image_alt: Baby being checked for temperature by a parent
 excerpt: That 2am worry when your baby feels warm — Eva walks you through how to
   take their temperature, what the numbers mean, and when to call for help.
