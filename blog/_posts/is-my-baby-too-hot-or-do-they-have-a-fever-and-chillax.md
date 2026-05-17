@@ -12,6 +12,7 @@ description: Is your baby too hot or running a fever? Learn how to tell the
   Essential guide for new parents.
 keywords: " is my baby too hot or do they have a fever,  baby fever vs
   overheating, how to tell if baby has a fever, baby temperature too high"
+image: pexels-joslyn-pickens-2185980-7271436.jpg
 excerpt: Is My Baby Too Hot or Do They Have a Fever?  That 2am worry when your
   baby feels warm — we've got you. Eva walks you through how to take your baby's
   temperature, what the numbers mean, and when to call for help.
