@@ -1,16 +1,20 @@
 ---
 layout: blog-post.njk
 permalink: /blog/{{slug}}/
-title: Is My Baby Too Hot or Do They Have a Fever?
 slug: baby-too-hot-or-fever
+title: Is My Baby Too Hot or Do They Have a Fever?
 category: First Aid
 reading_time: 5
 date: 2026-05-17T12:35:00.000+01:00
-description: Is your baby too hot or running a fever? Learn how to tell the difference, what temperatures are safe, and when to call your doctor — a plain-English guide for new parents.
-keywords: "baby fever, baby too hot, baby temperature, how to take baby temperature, when to call 999 baby fever, baby fever vs overheating"
-image: pexels-joslyn-pickens-2185980-7271436.jpg
+description: Is your baby too hot or running a fever? Learn how to tell the
+  difference, what temperatures are safe, and when to call your doctor — a
+  plain-English guide for new parents.
+keywords: baby fever, baby too hot, baby temperature, how to take baby
+  temperature, when to call 999 baby fever, baby fever vs overheating
+image: ""
 image_alt: Baby being checked for temperature by a parent
-excerpt: That 2am worry when your baby feels warm — Eva walks you through how to take their temperature, what the numbers mean, and when to call for help.
+excerpt: That 2am worry when your baby feels warm — Eva walks you through how to
+  take their temperature, what the numbers mean, and when to call for help.
 cta_course: 2-Hour Parent First Aid
 ---
 
