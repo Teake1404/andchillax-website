@@ -6,7 +6,7 @@ slug: Not sure if your baby has a fever or is just warm? Eva from And Chillax
   explains exactly what to check and when to worry — in plain English.
 category: First Aid
 reading_time: 5
-date: 2026-05-17T18:58:00.000+01:00
+date: 2026-05-17T19:00:00.000+01:00
 description: Is your baby too hot or running a fever? Learn how to tell the
   difference, what temperatures are safe, and when to call your doctor.
   Essential guide for new parents.
