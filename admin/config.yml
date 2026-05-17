@@ -19,6 +19,13 @@ display_url: https://www.andchillax.co.uk
 logo_url: /site_main_logo1.png
 locale: en
 
+# Slug sanitisation — strip unsafe URL chars (?, |, accents, etc.) so
+# auto-generated URLs from titles are always valid file paths.
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "-"
+
 # Editorial workflow — drafts go to a "Pull Request" before merging.
 # Eva can write drafts, preview, and publish when ready.
 publish_mode: editorial_workflow
@@ -40,9 +47,14 @@ collections:
     summary: "{{title}} — {{date | date('YYYY-MM-DD')}}"
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "blog-post.njk"}
+      # Permalink is auto-built from the title (Decap evaluates {{slug}}
+      # at write time using the sanitised title-slug, so the .md file
+      # gets a literal URL like /blog/baby-choking/ written into it).
+      # Eva never sees this field — keeps her from putting the wrong
+      # thing in the slug.
       - {label: "Permalink", name: "permalink", widget: "hidden", default: "/blog/{{slug}}/"}
-      - {label: "Title", name: "title", widget: "string", hint: "The headline of the post — also becomes the page title shown in Google."}
-      - {label: "URL slug", name: "slug", widget: "string", hint: "What appears in the URL (e.g. 'baby-choking' becomes /blog/baby-choking). Lowercase, hyphens, no spaces."}
+      - {label: "Slug", name: "slug", widget: "hidden", default: "{{slug}}"}
+      - {label: "Title", name: "title", widget: "string", hint: "The headline of the post — also becomes the page title shown in Google. Keep it short and natural — the URL is auto-generated from this. Do NOT add ' | And Chillax' at the end (the website does that automatically)."}
       - {label: "Category", name: "category", widget: "select", options: ["First Aid", "Doula", "Newborn Safety", "Birth", "Childhood Illness"]}
       - {label: "Reading time (minutes)", name: "reading_time", widget: "number", default: 5, min: 1, max: 30}
       - {label: "Publish date", name: "date", widget: "datetime"}
