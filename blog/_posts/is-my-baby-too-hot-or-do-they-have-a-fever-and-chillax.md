@@ -17,8 +17,6 @@ excerpt: Is My Baby Too Hot or Do They Have a Fever?  That 2am worry when your
   temperature, what the numbers mean, and when to call for help.
 cta_course: 2-Hour Parent First Aid
 ---
-
-
 ## Is my baby hot or do they have a fever? Here's how to tell
 
 You're cuddling your little one andsomething just feels… off. They're warm. Maybe a bit flushed. And now you'reGoogling at 2am wondering if you should be worried.
@@ -79,6 +77,6 @@ Trust your gut. You know your baby. Ifsomething feels wrong, get help — you're
 
 This is exactly the kind of thing we coverin my 2-Hour Parent First Aid course— what's normal, what's not, and what to do while you're waiting for help. Noscary medical jargon, just calm and practical skills you'll actually rememberat 2am.
 
-Come and join us in Anerley, South London.You'll leave feeling so much more prepared. 💛
+Book your private course in South London.You'll leave feeling so much more prepared. 💛
 
 Eva — And Chillax
