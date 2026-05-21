@@ -9,6 +9,27 @@
   <link rel="canonical" href="https://andchillax.co.uk{{ page.url | replace('.html', '') }}">
   <link rel="stylesheet" href="/assets/style.css?v=6">
 
+  {# Resolve image URL — supports both CMS uploads (bare filename → /assets/uploads/foo.jpg)
+     AND existing site images (full path → /assets/images/foo.jpg used as-is) #}
+  {% set imagePath = '' %}
+  {% if image %}
+    {% if image[0] == '/' %}{% set imagePath = image %}{% else %}{% set imagePath = '/assets/uploads/' + image %}{% endif %}
+  {% endif %}
+  {% set imageAbsolute = 'https://andchillax.co.uk' + imagePath %}
+  {% set ogImage = imageAbsolute if image else 'https://andchillax.co.uk/assets/images/photo-newborn.jpg' %}
+
+  {# Open Graph + Twitter Card — so Instagram/Facebook/WhatsApp shares show a proper preview #}
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="{{ title }} — And Chillax">
+  <meta property="og:description" content="{{ description }}">
+  <meta property="og:url" content="https://andchillax.co.uk{{ page.url | replace('.html', '') }}">
+  <meta property="og:image" content="{{ ogImage }}">
+  <meta property="og:site_name" content="And Chillax">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ title }}">
+  <meta name="twitter:description" content="{{ description }}">
+  <meta name="twitter:image" content="{{ ogImage }}">
+
   {# Article schema for SEO #}
   <script type="application/ld+json">
   {
@@ -25,7 +46,7 @@
       "name": "And Chillax"
     }
     {% if image %},
-    "image": "https://andchillax.co.uk/assets/uploads/{{ image }}"
+    "image": "{{ imageAbsolute }}"
     {% endif %}
   }
   </script>
@@ -77,7 +98,7 @@
   {% if image %}
   <div class="container container--narrow">
     <div class="article-image">
-      <img src="/assets/uploads/{{ image }}" alt="{{ image_alt or title }}" loading="eager" style="width:100%; height:100%; object-fit:cover; position:absolute; inset:0; border-radius: var(--radius-lg);">
+      <img src="{{ imagePath }}" alt="{{ image_alt or title }}" loading="eager" style="width:100%; height:100%; object-fit:cover; position:absolute; inset:0; border-radius: var(--radius-lg);">
     </div>
   </div>
   {% endif %}
