@@ -8,8 +8,8 @@ reading_time: 4
 date: 2026-05-19T09:00:00.000+01:00
 description: Postnatal or postpartum doula — what's the difference? An honest plain-English answer from a South London postnatal doula who gets asked this every week.
 keywords: postnatal doula, postpartum doula, doula London, postnatal vs postpartum, what does a doula do, postnatal doula South London, postpartum doula London
-image: /assets/images/photo-baby-feet.jpg
-image_alt: Newborn baby feet in soft natural light
+image: /assets/images/eva-portrait-2.jpg
+image_alt: Eva Levinson, postnatal doula and NHS infant feeding specialist in South London
 excerpt: Confused by the terminology? Postnatal vs postpartum doula — same role, different words. An honest explainer from a South London postnatal doula.
 cta_course: Doula Services
 ---

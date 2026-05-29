@@ -8,8 +8,8 @@ reading_time: 5
 date: 2026-05-28T14:27:00.000+01:00
 description: Keeping babies under 6 months safe in the heat — why sunscreen isn't recommended, how to use shade and clothing instead, tips for keeping your newborn cool at home, and signs of overheating to watch for.
 keywords: baby sun safety, newborn heatwave, babies under 6 months sunscreen, keeping baby cool in summer, newborn overheating, baby sun protection, SIDS overheating risk, baby sleep hot weather, newborn shade pram, baby dehydration signs, NHS baby sun guidance
-image: /assets/images/photo-newborn.jpg
-image_alt: Newborn baby resting calmly, kept cool and shaded
+image: /assets/images/photo-baby-feet.jpg
+image_alt: Bare newborn baby feet — keeping baby cool in hot weather
 excerpt: Heatwave with a tiny baby? Why sunscreen isn't for under-6-months, how to use shade and clothing instead, keeping your newborn cool at home, and the signs of overheating to watch for.
 cta_course: 2-Hour Parent First Aid
 ---
