@@ -26,9 +26,11 @@ slug:
   clean_accents: true
   sanitize_replacement: "-"
 
-# Editorial workflow — drafts go to a "Pull Request" before merging.
-# Eva can write drafts, preview, and publish when ready.
-publish_mode: editorial_workflow
+# Simple publish mode (no editorial_workflow). Publishing commits the
+# post + any uploaded images directly to the repo in one go. This is
+# more reliable for image uploads — editorial_workflow (PR-based) has
+# a known Decap bug where uploaded images don't get committed with the
+# post. Eva doesn't need the draft/PR review step anyway.
 
 # Content collections Eva can edit
 collections:

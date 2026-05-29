@@ -10,13 +10,17 @@
   <link rel="stylesheet" href="/assets/style.css?v=6">
 
   {# Resolve image URL — supports both CMS uploads (bare filename → /assets/uploads/foo.jpg)
-     AND existing site images (full path → /assets/images/foo.jpg used as-is) #}
-  {% set imagePath = '' %}
+     AND existing site images (full path → /assets/images/foo.jpg used as-is).
+     If no image is uploaded, fall back to a category-appropriate default so
+     the post never looks bare and always has a social-share preview image. #}
   {% if image %}
     {% if image[0] == '/' %}{% set imagePath = image %}{% else %}{% set imagePath = '/assets/uploads/' + image %}{% endif %}
-  {% endif %}
+  {% elif category == 'Doula' or category == 'Birth' %}{% set imagePath = '/assets/images/blog-doula.jpg' %}
+  {% elif category == 'First Aid' %}{% set imagePath = '/assets/images/blog-infant-cpr.jpg' %}
+  {% elif category == 'Childhood Illness' %}{% set imagePath = '/assets/images/blog-febrile.jpg' %}
+  {% else %}{% set imagePath = '/assets/images/photo-newborn.jpg' %}{% endif %}
   {% set imageAbsolute = 'https://andchillax.co.uk' + imagePath %}
-  {% set ogImage = imageAbsolute if image else 'https://andchillax.co.uk/assets/images/photo-newborn.jpg' %}
+  {% set ogImage = imageAbsolute %}
 
   {# Open Graph + Twitter Card — so Instagram/Facebook/WhatsApp shares show a proper preview #}
   <meta property="og:type" content="article">
@@ -44,10 +48,8 @@
     "publisher": {
       "@type": "Organization",
       "name": "And Chillax"
-    }
-    {% if image %},
+    },
     "image": "{{ imageAbsolute }}"
-    {% endif %}
   }
   </script>
 
@@ -95,7 +97,7 @@
     </div>
   </header>
 
-  {% if image %}
+  {% if imagePath %}
   <div class="container container--narrow">
     <div class="article-image">
       <img src="{{ imagePath }}" alt="{{ image_alt or title }}" loading="eager" style="width:100%; height:100%; object-fit:cover; position:absolute; inset:0; border-radius: var(--radius-lg);">
