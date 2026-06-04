@@ -1,3 +1,7 @@
+---
+permalink: /blog/index.html
+eleventyExcludeFromCollections: true
+---
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>
@@ -6,7 +10,7 @@
   <title>Blog — First Aid, Baby &amp; Birth — And Chillax South London</title>
   <meta name="description" content="Practical, honest advice on baby first aid, infant CPR, doula support, and parenting from a Postnatal Midwifery Assistant and Ofsted-compliant first aid instructor.">
   <link rel="canonical" href="https://andchillax.co.uk/blog/">
-  <link rel="stylesheet" href="../assets/style.css?v=6">
+  <link rel="stylesheet" href="/assets/style.css?v=6">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-FNJRJ2P3NN"></script>
   <script>
@@ -20,17 +24,17 @@
 
 <header class="site-header">
   <div class="container site-header__inner">
-    <a href="../index.html" class="brand">And Chillax</a>
+    <a href="/" class="brand">And Chillax</a>
         <button class="site-header__menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" type="button">
       <span class="site-header__menu-toggle__icon"><span></span><span></span><span></span></span>
     </button>
     <nav class="nav" aria-label="Main">
-      <a href="../courses/index.html">First Aid Courses</a>
-      <a href="../baby-massage.html">Baby Massage</a>
-      <a href="../doula-services.html">Doula</a>
-      <a href="index.html" class="active">Blog</a>
-      <a href="../about.html">About</a>
-      <a href="../contact.html">Contact</a>
+      <a href="/courses/">First Aid Courses</a>
+      <a href="/baby-massage">Baby Massage</a>
+      <a href="/doula-services">Doula</a>
+      <a href="/blog/" class="active">Blog</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
       <a href="https://www.instagram.com/andchillax/" target="_blank" rel="noopener" aria-label="Instagram" style="display:inline-flex;align-items:center;font-size:1.25rem;text-decoration:none">📷</a>
       <a href="https://bookwhen.com/andchillax" class="nav__cta">Book a Course →</a>
     </nav>
@@ -38,7 +42,7 @@
 </header>
 
 <div class="container">
-  <nav class="breadcrumb"><a href="../index.html">Home</a> · <span>Blog</span></nav>
+  <nav class="breadcrumb"><a href="/">Home</a> · <span>Blog</span></nav>
 </div>
 
 <section class="hero">
@@ -53,42 +57,43 @@
   <div class="container">
     <div class="blog-grid">
 
-      <a href="/blog/sun-safety-babies-under-6-months/" class="blog-card">
-        <div class="blog-card__image">
-          <img src="../assets/images/photo-baby-feet.jpg" alt="Bare newborn baby feet — keeping baby cool in hot weather" loading="lazy">
-        </div>
-        <div class="blog-card__body">
-          <span class="blog-card__category">Newborn Safety</span>
-          <h3 class="blog-card__title">Sun safety for babies under 6 months</h3>
-          <p class="blog-card__excerpt">Heatwave with a tiny baby? Why sunscreen isn't for under-6-months, how to use shade and clothing, keeping your newborn cool, and the signs of overheating.</p>
-        </div>
-      </a>
+      {# ============================================================
+         CMS-managed posts (newest first via collections.posts).
+         Eva publishes new posts at /admin → they auto-appear here.
+         Image resolution mirrors blog-post.njk: explicit path wins,
+         then bare filename → /assets/uploads/, then category default.
+         ============================================================ #}
+      {% for post in collections.posts %}
+        {% set img = post.data.image %}
+        {% if img %}
+          {% if img[0] == '/' %}{% set imgPath = img %}{% else %}{% set imgPath = '/assets/uploads/' + img %}{% endif %}
+        {% elif post.data.category == 'Doula' or post.data.category == 'Birth' %}{% set imgPath = '/assets/images/blog-doula.jpg' %}
+        {% elif post.data.category == 'First Aid' %}{% set imgPath = '/assets/images/blog-infant-cpr.jpg' %}
+        {% elif post.data.category == 'Childhood Illness' %}{% set imgPath = '/assets/images/blog-febrile.jpg' %}
+        {% else %}{% set imgPath = '/assets/images/photo-newborn.jpg' %}{% endif %}
 
-      <a href="/blog/postnatal-vs-postpartum-doula/" class="blog-card">
+      <a href="{{ post.url }}" class="blog-card">
         <div class="blog-card__image">
-          <img src="../assets/images/eva-portrait-2.jpg" alt="Eva Levinson, postnatal doula in South London" loading="lazy">
+          <img src="{{ imgPath }}" alt="{{ post.data.image_alt or post.data.title }}" loading="lazy">
         </div>
         <div class="blog-card__body">
-          <span class="blog-card__category">Doula</span>
-          <h3 class="blog-card__title">Postnatal vs postpartum doula — what's the difference?</h3>
-          <p class="blog-card__excerpt">Same role, different words. An honest plain-English explainer from a South London postnatal doula who gets asked this every week.</p>
+          <span class="blog-card__category">{{ post.data.category }}</span>
+          <h3 class="blog-card__title">{{ post.data.title }}</h3>
+          <p class="blog-card__excerpt">{{ post.data.excerpt }}</p>
         </div>
       </a>
+      {% endfor %}
 
-      <a href="/blog/baby-too-hot-or-fever/" class="blog-card">
-        <div class="blog-card__image">
-          <img src="../assets/images/photo-newborn.jpg" alt="Newborn baby being checked by a parent" loading="lazy">
-        </div>
-        <div class="blog-card__body">
-          <span class="blog-card__category">First Aid</span>
-          <h3 class="blog-card__title">Is my baby too hot or do they have a fever?</h3>
-          <p class="blog-card__excerpt">That 2am worry when your baby feels warm — how to take their temperature, what the numbers mean, and when to call for help.</p>
-        </div>
-      </a>
+      {# ============================================================
+         Legacy static-HTML posts (the original 9). These predate the
+         CMS — kept hardcoded here. If any of these get migrated to
+         markdown in /blog/_posts/ in future, just delete its card
+         below and it'll show up via the dynamic loop above instead.
+         ============================================================ #}
 
       <a href="baby-choking.html" class="blog-card">
         <div class="blog-card__image">
-          <img src="../assets/images/blog-baby-choking.jpg" alt="Baby first aid — choking response" loading="lazy">
+          <img src="/assets/images/blog-baby-choking.jpg" alt="Baby first aid — choking response" loading="lazy">
         </div>
         <div class="blog-card__body">
           <span class="blog-card__category">First Aid</span>
@@ -99,7 +104,7 @@
 
       <a href="infant-cpr.html" class="blog-card">
         <div class="blog-card__image">
-          <img src="../assets/images/blog-infant-cpr.jpg" alt="Infant CPR demonstration" loading="lazy">
+          <img src="/assets/images/blog-infant-cpr.jpg" alt="Infant CPR demonstration" loading="lazy">
         </div>
         <div class="blog-card__body">
           <span class="blog-card__category">First Aid</span>
@@ -110,7 +115,7 @@
 
       <a href="hospital-bag-checklist.html" class="blog-card">
         <div class="blog-card__image">
-          <img src="../assets/images/blog-hospital-bag.jpg" alt="Hospital bag essentials laid out" loading="lazy">
+          <img src="/assets/images/blog-hospital-bag.jpg" alt="Hospital bag essentials laid out" loading="lazy">
         </div>
         <div class="blog-card__body">
           <span class="blog-card__category">Birth</span>
@@ -121,7 +126,7 @@
 
       <a href="what-does-a-doula-do.html" class="blog-card">
         <div class="blog-card__image">
-          <img src="../assets/images/blog-doula.jpg" alt="Doula supporting parents" loading="lazy">
+          <img src="/assets/images/blog-doula.jpg" alt="Doula supporting parents" loading="lazy">
         </div>
         <div class="blog-card__body">
           <span class="blog-card__category">Doula</span>
@@ -132,7 +137,7 @@
 
       <a href="hand-foot-mouth.html" class="blog-card">
         <div class="blog-card__image">
-          <img src="../assets/images/blog-hand-foot-mouth.jpg" alt="Hand foot and mouth disease in children" loading="lazy">
+          <img src="/assets/images/blog-hand-foot-mouth.jpg" alt="Hand foot and mouth disease in children" loading="lazy">
         </div>
         <div class="blog-card__body">
           <span class="blog-card__category">Childhood Illness</span>
@@ -143,7 +148,7 @@
 
       <a href="febrile-seizures.html" class="blog-card">
         <div class="blog-card__image">
-          <img src="../assets/images/blog-febrile.jpg" alt="Baby with fever — what to do during a febrile seizure" loading="lazy">
+          <img src="/assets/images/blog-febrile.jpg" alt="Baby with fever — what to do during a febrile seizure" loading="lazy">
         </div>
         <div class="blog-card__body">
           <span class="blog-card__category">First Aid</span>
@@ -154,7 +159,7 @@
 
       <a href="hot-water-bottle-burns.html" class="blog-card">
         <div class="blog-card__image">
-          <img src="../assets/images/blog-hot-water.jpg" alt="Hot water bottle — burn risk for children" loading="lazy">
+          <img src="/assets/images/blog-hot-water.jpg" alt="Hot water bottle — burn risk for children" loading="lazy">
         </div>
         <div class="blog-card__body">
           <span class="blog-card__category">First Aid</span>
@@ -165,7 +170,7 @@
 
       <a href="newborn-car-seat.html" class="blog-card">
         <div class="blog-card__image">
-          <img src="../assets/images/blog-car-seat.jpg" alt="Newborn car seat safety" loading="lazy">
+          <img src="/assets/images/blog-car-seat.jpg" alt="Newborn car seat safety" loading="lazy">
         </div>
         <div class="blog-card__body">
           <span class="blog-card__category">Newborn Safety</span>
@@ -176,7 +181,7 @@
 
       <a href="co-sleeping-safely.html" class="blog-card">
         <div class="blog-card__image">
-          <img src="../assets/images/blog-co-sleeping.jpg" alt="Co-sleeping safely with newborn" loading="lazy">
+          <img src="/assets/images/blog-co-sleeping.jpg" alt="Co-sleeping safely with newborn" loading="lazy">
         </div>
         <div class="blog-card__body">
           <span class="blog-card__category">Newborn Safety</span>
@@ -188,7 +193,7 @@
     </div>
 
     <p style="text-align: center; margin-top: 3rem; color: var(--colour-text-muted); font-size: var(--fs-sm)">
-      More posts coming every fortnight. <a href="#">Subscribe to email updates →</a>
+      More posts coming every fortnight.
     </p>
   </div>
 </section>
@@ -197,8 +202,8 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-col footer-brand"><h4>And Chillax</h4><p>Warm, fear-free first aid, baby massage and doula support across South London.</p></div>
-      <div class="footer-col"><h4>Courses</h4><ul><li><a href="../courses/12-hour-paediatric-first-aid.html">12-Hour Paediatric</a></li><li><a href="../courses/2-hour-parent-first-aid.html">Parent First Aid</a></li><li><a href="../courses/1-day-emergency-first-aid-at-work.html">1-Day EFAW</a></li><li><a href="../courses/index.html">All courses →</a></li></ul></div>
-      <div class="footer-col"><h4>Services</h4><ul><li><a href="../baby-massage.html">Baby Massage</a></li><li><a href="../doula-services.html">Doula Services</a></li><li><a href="index.html">Blog</a></li><li><a href="../reviews.html">Reviews</a></li></ul></div>
+      <div class="footer-col"><h4>Courses</h4><ul><li><a href="/courses/12-hour-paediatric-first-aid">12-Hour Paediatric</a></li><li><a href="/courses/2-hour-parent-first-aid">Parent First Aid</a></li><li><a href="/courses/1-day-emergency-first-aid-at-work">1-Day EFAW</a></li><li><a href="/courses/">All courses →</a></li></ul></div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a href="/baby-massage">Baby Massage</a></li><li><a href="/doula-services">Doula Services</a></li><li><a href="/blog/">Blog</a></li><li><a href="/reviews">Reviews</a></li></ul></div>
       <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:+447950222958">07950 222958</a></li><li><a href="mailto:eva@andchillax.co.uk">eva@andchillax.co.uk</a></li><li>Croydon Rd, Anerley, SE20 7AB</li></ul></div>
     </div>
     <div class="footer-bottom"><span>© 2026 And Chillax · Eva Levinson</span><span>Serving Anerley · Crystal Palace · Penge · Sydenham · Beckenham · Bromley · Dulwich</span><a href="https://www.instagram.com/andchillax/" target="_blank" rel="noopener" aria-label="Follow And Chillax on Instagram" style="display:inline-flex;align-items:center;gap:.4em">Instagram → @andchillax</a></div>

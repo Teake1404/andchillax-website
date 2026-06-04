@@ -48,14 +48,11 @@ collections:
     format: "frontmatter"
     summary: "{{title}} — {{date | date('YYYY-MM-DD')}}"
     fields:
-      - {label: "Layout", name: "layout", widget: "hidden", default: "blog-post.njk"}
-      # Permalink is auto-built from the title (Decap evaluates {{slug}}
-      # at write time using the sanitised title-slug, so the .md file
-      # gets a literal URL like /blog/baby-choking/ written into it).
-      # Eva never sees this field — keeps her from putting the wrong
-      # thing in the slug.
-      - {label: "Permalink", name: "permalink", widget: "hidden", default: "/blog/{{slug}}/"}
-      - {label: "Slug", name: "slug", widget: "hidden", default: "{{slug}}"}
+      # No hidden permalink/slug/layout fields here — those are set
+      # via Eleventy directory data (blog/_posts/_posts.11tydata.json).
+      # That avoids the Decap quirk where {{slug}} template strings in
+      # hidden field defaults get written literally into the .md file.
+      # Eleventy computes the URL from the filename automatically.
       - {label: "Title", name: "title", widget: "string", hint: "The headline of the post — also becomes the page title shown in Google. Keep it short and natural — the URL is auto-generated from this. Do NOT add ' | And Chillax' at the end (the website does that automatically)."}
       - {label: "Category", name: "category", widget: "select", options: ["First Aid", "Doula", "Newborn Safety", "Birth", "Childhood Illness"]}
       - {label: "Reading time (minutes)", name: "reading_time", widget: "number", default: 5, min: 1, max: 30}

@@ -1,7 +1,4 @@
 ---
-layout: blog-post.njk
-permalink: /blog/{{slug}}/
-slug: "{{slug}}"
 title: The Loneliness of New Motherhood Nobody Talks About
 category: Doula
 reading_time: 5
