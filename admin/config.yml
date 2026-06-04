@@ -16,7 +16,7 @@ public_folder: "/assets/uploads"
 # Friendly admin UI labels
 site_url: https://www.andchillax.co.uk
 display_url: https://www.andchillax.co.uk
-logo_url: /site_main_logo1.png
+logo_url: /assets/images/logo.png
 locale: en
 
 # Slug sanitisation — strip unsafe URL chars (?, |, accents, etc.) so
