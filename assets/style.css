@@ -624,6 +624,14 @@ hr { border: none; border-top: 1px solid var(--colour-border); margin: 3rem 0; }
   aspect-ratio: 16 / 10;
   background: linear-gradient(135deg, #e8e3dc 0%, #d8d3cc 100%);
   position: relative;
+  overflow: hidden;
+}
+.blog-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
 }
 .blog-card__image-fallback {
   position: absolute; inset: 0;
