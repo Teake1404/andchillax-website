@@ -1,3 +1,7 @@
+---
+permalink: /index.html
+eleventyExcludeFromCollections: true
+---
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>
@@ -198,38 +202,29 @@
     </header>
 
     <div class="blog-grid">
-      <a href="blog/baby-choking.html" class="blog-card">
-        <div class="blog-card__image">
-          <img src="assets/images/blog-baby-choking.jpg" alt="Baby first aid — what to do if your baby is choking" loading="lazy">
-        </div>
-        <div class="blog-card__body">
-          <span class="blog-card__category">First Aid</span>
-          <h3 class="blog-card__title">Baby choking — exactly what to do</h3>
-          <p class="blog-card__excerpt">A step-by-step guide to back blows and chest thrusts for infants under 1, with photos. The technique every new parent needs to know.</p>
-        </div>
-      </a>
+      {# Latest 3 CMS-managed blog posts (newest first). Eva publishes
+         via /admin → they auto-appear here. Same image resolution
+         logic as blog/index.njk and blog-post.njk. #}
+      {% for post in collections.posts.slice(0, 3) %}
+        {% set img = post.data.image %}
+        {% if img %}
+          {% if img[0] == '/' %}{% set imgPath = img %}{% else %}{% set imgPath = '/assets/uploads/' + img %}{% endif %}
+        {% elif post.data.category == 'Doula' or post.data.category == 'Birth' %}{% set imgPath = '/assets/images/blog-doula.jpg' %}
+        {% elif post.data.category == 'First Aid' %}{% set imgPath = '/assets/images/blog-infant-cpr.jpg' %}
+        {% elif post.data.category == 'Childhood Illness' %}{% set imgPath = '/assets/images/blog-febrile.jpg' %}
+        {% else %}{% set imgPath = '/assets/images/photo-newborn.jpg' %}{% endif %}
 
-      <a href="blog/what-does-a-doula-do.html" class="blog-card">
+      <a href="{{ post.url }}" class="blog-card">
         <div class="blog-card__image">
-          <img src="assets/images/blog-doula.jpg" alt="What does a doula actually do — birth and postnatal support in South London" loading="lazy">
+          <img src="{{ imgPath }}" alt="{{ post.data.image_alt or post.data.title }}" loading="lazy">
         </div>
         <div class="blog-card__body">
-          <span class="blog-card__category">Doula</span>
-          <h3 class="blog-card__title">What does a doula actually do?</h3>
-          <p class="blog-card__excerpt">An honest guide to what doulas are, what we do (and don't do), and how to know if you'd benefit from one in South London.</p>
+          <span class="blog-card__category">{{ post.data.category }}</span>
+          <h3 class="blog-card__title">{{ post.data.title }}</h3>
+          <p class="blog-card__excerpt">{{ post.data.excerpt }}</p>
         </div>
       </a>
-
-      <a href="blog/hospital-bag-checklist.html" class="blog-card">
-        <div class="blog-card__image">
-          <img src="assets/images/blog-hospital-bag.jpg" alt="Hospital bag essentials checklist — the doula's guide for South London births" loading="lazy">
-        </div>
-        <div class="blog-card__body">
-          <span class="blog-card__category">Birth</span>
-          <h3 class="blog-card__title">Hospital bag essentials — the doula's checklist</h3>
-          <p class="blog-card__excerpt">The 14 things you actually need (and 8 you don't). Tested across hundreds of South London births.</p>
-        </div>
-      </a>
+      {% endfor %}
     </div>
 
     <p style="text-align:center; margin-top:3rem;">

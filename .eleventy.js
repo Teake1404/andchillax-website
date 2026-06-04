@@ -29,8 +29,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("humans.txt");
   eleventyConfig.addPassthroughCopy("data");
 
-  // Top-level pages (existing static HTML, not Eleventy-managed)
-  eleventyConfig.addPassthroughCopy("index.html");
+  // Top-level pages (existing static HTML, not Eleventy-managed).
+  // Homepage is now an Eleventy template (index.njk) — auto-pulls
+  // the latest 3 blog posts via collections.posts.
   eleventyConfig.addPassthroughCopy("about.html");
   eleventyConfig.addPassthroughCopy("contact.html");
   eleventyConfig.addPassthroughCopy("baby-massage.html");
