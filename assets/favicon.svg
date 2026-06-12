@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Outlined rounded square -->
+  <rect x="56" y="56" width="400" height="400" rx="84" ry="84"
+        fill="none" stroke="#E91E63" stroke-width="34"/>
+  <!-- AC letters -->
+  <text x="256" y="332" text-anchor="middle"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif"
+        font-size="200" font-weight="800" fill="#E91E63" letter-spacing="-4">AC</text>
+</svg>
