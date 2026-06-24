@@ -8,6 +8,7 @@ description: Hot weather affects how your baby feeds. Here's what to expect and
 keywords: breastfeeding in hot weather, bottle feeding heatwave, newborn feeding
   in heat, baby dehydration signs, cluster feeding summer, colostrum heat,
   infant feeding summer UK
+image: /assets/uploads/pexels-brianna-lisa-photography-196512753-11620471.jpg
 excerpt: Heatwaves change how babies feed. Eva shares what's normal, what to
   watch, and when to get help.
 cta_course: ""
