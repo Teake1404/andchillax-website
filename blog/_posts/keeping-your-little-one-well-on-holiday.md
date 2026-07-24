@@ -16,7 +16,7 @@ cta_course: ""
 ---
 Thirty years ago, I was in St Lucia with my daughter. She was eighteen months old. Halfway through the holiday, she got a bad bout of diarrhoea. It came on so fast that by the middle of the night I'd run out of nappies. We ended up in hospital. She was on plain rice for days before she started to properly recover.
 
-I remember exactly how frightened I felt. of frightened. I've taught hundreds of parents since then, and I still think about that night whenever a family tells me they're heading off somewhere hot with a little one in tow.
+I remember exactly how frightened I felt. I've taught hundreds of parents since then, and I still think about that night whenever a family tells me they're heading off somewhere hot with a little one in tow.
 
 So here's what I wish someone had told me back then.
 
@@ -73,5 +73,3 @@ Holidays with little ones are supposed to be joyful, and most of the time they r
 Wishing you a happy, healthy holiday, wherever you're headed.
 
 Eva x
-
-
