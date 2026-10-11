@@ -43,8 +43,6 @@ Ask who is trained, and how often.
 
 Tell grandparents, babysitters and party hosts too.
 Spotting a serious reaction.
-
-
 Mild reactions, like an itchy mouth or a few hives, still need watching. Speak to a pharmacist or call 111.
 Anaphylaxis is different. It comes on fast and can look like:
 Swelling of the tongue or throat.
@@ -66,16 +64,30 @@ Stay with them. They must go to hospital, even if they perk up, because symptoms
 No pen? Please don't wait
 Call 999, say "anaphylaxis", lay them flat and stay close. 
 Ask if anyone nearby has a pen, as schools should now have spares.
+
+
 Antihistamines are fine for mild reactions, but they don't treat anaphylaxis. Adrenaline does.
 Pens, ages and babies
 There's no single age. 
 Pens are prescribed by a specialist based on your child's weight, so the dose suits them. 
 Babies can have anaphylaxis too, though it's less common in the very young. 
+
+
 If your baby has had a reaction, ask your GP for an allergy clinic referral. 
 If it happens before then, call 999 straight away.
+
+
 Why do allergies happen?
+
+
 The immune system mistakes something harmless, like milk or egg, for a threat. It is nobody's fault.
+
+
 Children are more likely to have allergies if they have eczema, asthma or hay fever, or if allergies run in the family. Poorly controlled asthma can make a reaction more serious. If your baby has eczema, talk to your GP or health visitor before introducing foods like egg or peanut.
+
+
 A gentle last word
 I know this can feel frightening, especially in those early months. But knowing what to do is the best way to feel calmer, and you've already taken a step by reading this. Share it with the people who look after your little one, and come along to a class where you can practise hands-on.
+
+
 With love,Eva x
