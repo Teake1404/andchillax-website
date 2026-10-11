@@ -11,7 +11,7 @@ keywords: Benedict's Law, allergy safety in schools, anaphylaxis first aid, what
 image: /assets/uploads/pexels-karola-g-4202957.jpg
 excerpt: What Benedict's Law means for schools, plus gentle, practical allergy
   first aid every parent can learn, even if you don't have an adrenaline pen.
-cta_course: ""
+cta_course: null
 ---
 If you've ever stood at the school gates, waved goodbye, and felt that little tug in your chest, you'll understand why Benedict's story has touched so many of us.
 
@@ -90,4 +90,6 @@ A gentle last word
 I know this can feel frightening, especially in those early months. But knowing what to do is the best way to feel calmer, and you've already taken a step by reading this. Share it with the people who look after your little one, and come along to a class where you can practise hands-on.
 
 
-With love,Eva x
+With love,
+
+Eva x
